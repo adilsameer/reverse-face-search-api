@@ -15,8 +15,8 @@ This repo contains copy-paste examples for calling the Actor from curl, Python a
 | **Input** | One face image: base64 string **or** public image URL (JPEG, PNG, WebP, max 10 MB) |
 | **Output** | JSON: matching pages (domain or full URL), confidence 0–100, face thumbnail (base64) |
 | **Fast mode** | $0.02 per search, domain-level matches (e.g. `https://instagram.com`) |
-| **Deep mode** | $0.15 per search, full source URL of every match, sorted by confidence |
-| **Billing** | Pay-per-event via Apify, charged only for successful searches |
+| **Deep mode** | $0.29 per search, full source URL of every match, sorted by confidence |
+| **Billing** | Flat price per search via Apify: all matches included, no start or per-result fees. Charged only for successful searches. |
 | **Account needed** | An Apify account only. No FaceCheck.ID account, credits or crypto. |
 
 ## Examples
@@ -61,7 +61,7 @@ Errors come back as `{"success": false, "message": "..."}` and are not charged.
 
 ## Fast vs. deep
 
-Fast mode ($0.02) tells you **which websites** a face appears on: it keeps matches scoring 70+, or up to 6 matches scoring 50–69 if there are none. Deep mode ($0.15) gives you **the exact pages**: the full URL of every match FaceCheck.ID finds. A cheap pattern is to screen many photos in fast mode, then run deep mode only on photos with matches.
+Fast mode ($0.02) tells you **which websites** a face appears on: it keeps matches scoring 70+, or up to 6 matches scoring 50–69 if there are none. Deep mode ($0.29) gives you **the exact pages**: the full URL of every match FaceCheck.ID finds. A cheap pattern is to screen many photos in fast mode, then run deep mode only on photos with matches.
 
 ## How it compares to the official FaceCheck.ID API
 
