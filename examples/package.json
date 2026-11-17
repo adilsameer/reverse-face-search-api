@@ -1,0 +1,6 @@
+{
+  "name": "reverse-face-search-api-examples",
+  "private": true,
+  "type": "module",
+  "description": "Examples for the Reverse Face Search API (FaceCheck.ID) Apify Actor"
+}
